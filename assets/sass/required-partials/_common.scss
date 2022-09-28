@@ -13,6 +13,24 @@ span { display: inline-block; }
 a { @include transition(); }
 
 ::first-letter { text-transform: uppercase; }
-p { line-height: 2; }
+
+.section-title {
+  font-size: 34px;
+  font-weight: 600;
+  color: $clr-white;
+}
+
+.eventOne__para,
+.eventTwo__para,
+.eventThree__para {
+  margin: 26px 0 58px;
+}
+
+p {
+  color: $clr-para;
+  font-size: 18px;
+  line-height: 2;
+  word-spacing: 1px;
+}
 
 /* common styling for all ends here */

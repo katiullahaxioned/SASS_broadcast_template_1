@@ -185,6 +185,16 @@
   transform: $value;
 }
 
+@mixin fontAwesome($content) {
+  content: '#{$content}';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-family: 'fontAwesome';
+  text-indent: 0;
+  @include transform(translate(-50%, -50%));
+}
+
 @mixin transition($value: all .3s) {
   -webkit-transition: $value;
   -o-transition: $value;

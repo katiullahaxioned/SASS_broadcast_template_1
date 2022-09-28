@@ -145,8 +145,23 @@ a {
   text-transform: uppercase;
 }
 
+.section-title {
+  font-size: 34px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.eventOne__para,
+.eventTwo__para,
+.eventThree__para {
+  margin: 26px 0 58px;
+}
+
 p {
+  color: #c1c7cd;
+  font-size: 18px;
   line-height: 2;
+  word-spacing: 1px;
 }
 
 /* common styling for all ends here */
@@ -303,6 +318,7 @@ p {
 }
 .banner__content p {
   margin: 31px 0 36px;
+  color: #fff;
   font-size: 20px;
   line-height: 1.9;
 }
@@ -319,5 +335,77 @@ p {
 }
 
 /* banner section styling ends here */
+/* eventOne section styling starts here */
+.eventOne__wrapper {
+  width: 100%;
+  padding: 96px 5% 91px;
+  background-color: #122635;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.eventOne__lists {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 50px;
+}
+.eventOne__lists li {
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #34434f;
+}
+.eventOne__lists a {
+  overflow: hidden;
+  position: relative;
+  color: #34434f;
+}
+.eventOne__lists a::before {
+  content: "\f04b";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-family: "fontAwesome";
+  text-indent: 0;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  font-size: 47px;
+}
+.eventOne__lists a img {
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.eventOne__lists a:hover {
+  color: #aa14cc;
+}
+.eventOne__lists a:hover img {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.eventOne__lists p {
+  padding: 26px 30px;
+}
+
+/* eventOne section styling ends here */
 
 /*# sourceMappingURL=style.css.map */

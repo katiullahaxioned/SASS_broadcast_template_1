@@ -1,0 +1,50 @@
+/* eventOne section styling starts here */
+
+.eventOne {
+  &__wrapper {
+    width: 100%;
+    padding: 96px 5% 91px;
+    background-color: $bg-event1;
+    @include display-flex;
+    @include align-items(center);
+    @include flex-direction(column);
+    @include justify-content(center);
+  }
+
+  &__lists {
+    @include display-flex;
+    @include align-items(center);
+    @include justify-content(center);
+    gap: 50px;
+
+    li {
+      border-radius: 5px;
+      overflow: hidden;
+      background-color: $bg-para;
+    }
+
+    a {
+      overflow: hidden;
+      position: relative;
+      color: $bg-para;
+
+      &::before {
+        @include fontAwesome(#{$play-icon});
+        z-index: 1;
+        font-size: 47px;
+      }
+
+      & img { @include transition; }
+
+      &:hover {
+        color: $clr-pink;
+
+        & img { @include transform(scale(1.1)); } 
+      }
+    }
+    
+    p { padding: 26px 30px; }
+  }
+}
+
+/* eventOne section styling ends here */
