@@ -1,0 +1,51 @@
+/* banner section styling starts here */
+
+.banner {
+  &__wrapper {
+    width: 100%;
+  }
+
+  &__figure {
+    height: 100%;
+
+    img {
+      height: 100%;
+      @include object(cover, center);
+    }
+  }
+
+  &__content {
+    position: absolute;
+    top: 59.5%;
+    left: 50%;
+    color: $clr-white;
+    font-weight: 600;
+    text-align: center;
+    @include transform(translate(-50%,-50%));
+
+    h1 {
+      font-size: 55px;
+    }
+
+    p {
+      margin: 31px 0 36px;
+      font-size: 20px;
+      line-height: 1.9;
+    }
+  }
+
+  &__button {
+    padding: 15px 26px;
+    border: 2px solid $clr-white;
+    border-radius: 3px;
+    color: $clr-white;
+    font-size: 20px;
+
+    &:hover {
+      background-color: $clr-white;
+      color: $bg-header;
+    }
+  }
+}
+
+/* banner section styling ends here */
