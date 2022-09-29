@@ -18,7 +18,11 @@
     @include flex-common(flex-start, center);
     gap: 38px;
     @include responsive-max(1280) { gap: 25px; }
-    @include responsive-max(1024) { @include flex-direction(column); }
+    
+    @include responsive-max(1024) {
+      @include align-items(center);
+      @include flex-direction(column);
+    }
 
 
     &--controls {
@@ -38,6 +42,12 @@
         @include align-items(center);
         @include flex-direction(row);
         gap: 25px;
+      }
+
+      @include responsive-max(995) {
+        width: auto;
+        @include flex-direction(column);
+        gap: 10px;
       }
       
 
@@ -74,13 +84,14 @@
       @include flex-wrap;
       gap: 32px;
       @include responsive-max(1280) { gap: 25px; }
+      @include responsive-max(1024) { @include justify-content(space-between); }
 
       li {
         border-radius: 5px;
         @include flex-common;
         overflow: hidden;
         @include responsive-max(1280) { @include flex-basis(31.3%); }
-        @include responsive-max(1024) { @include flex-basis(31.6%); }
+        @include responsive-max(995) { @include flex-basis(48%); }
       }
 
       a { width: 100%; }

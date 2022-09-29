@@ -18,6 +18,7 @@ a { @include transition(); }
   font-size: 34px;
   font-weight: 600;
   color: $clr-white;
+  @include responsive-max(995) { font-size: 25px; }
 }
 
 .eventOne__para,
@@ -48,6 +49,7 @@ p {
       @include fontAwesome(#{$play-icon});
       z-index: 1;
       font-size: 47px;
+      @include responsive-max(995) { font-size: 30px; }
     }
 
     & img { @include transition; }

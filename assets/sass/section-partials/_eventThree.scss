@@ -11,20 +11,25 @@
   }
 
   &__gallery--lists {
-    @include flex-common(flex-start, center);
+    @include display-flex;
     gap: 44px;
     @include responsive-max(1024) { gap: 25px; }
+    @include responsive-max(995) { @include flex-wrap; }
 
     li {
       @include flex-basis(33%);
       border-radius: 5px;
+      @include display-flex;
       overflow: hidden;
+      @include flex-direction(column);
       background-color: $bg-para;
+      @include responsive-max(995) { @include flex-basis(48%); }
     }
     
     p {
       padding: 28px;
       line-height: 1.7;
+      @include responsive-max(1024) { padding: 10px 25px; }
     }
   }
 }

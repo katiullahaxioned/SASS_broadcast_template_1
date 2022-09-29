@@ -21,7 +21,10 @@
       background-color: $bg-para;
     }
     
-    p { padding: 28px; }
+    p {
+      padding: 28px;
+      @include responsive-max(1024) { padding: 10px 25px; }
+    }
   }
 }
 
