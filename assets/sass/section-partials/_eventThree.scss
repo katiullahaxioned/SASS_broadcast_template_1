@@ -1,0 +1,30 @@
+/* eventThree section styling starts here */
+
+.eventThree {
+  &__wrapper {
+    width: 100%;
+    padding: 96px 5% 91px;
+    @include flex-common;
+    @include flex-direction(column);
+    background-color: $bg-event3;
+  }
+
+  &__gallery--lists {
+    @include flex-common(flex-start, center);
+    gap: 44px;
+
+    li {
+      @include flex-basis(33%);
+      border-radius: 5px;
+      overflow: hidden;
+      background-color: $bg-para;
+    }
+    
+    p {
+      padding: 28px;
+      line-height: 1.7;
+    }
+  }
+}
+
+/* eventThree section styling ends here */
