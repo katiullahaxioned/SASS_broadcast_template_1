@@ -201,6 +201,18 @@
   @include transform(translate(-50%, -50%));
 }
 
+@mixin socialIcon($iconMap) {
+  @each $key, $value in $iconMap {
+    li {
+      &:nth-child(#{$key}) {
+        a {
+          &::before { @include fontAwesome(#{$value}); }
+        }
+      }
+    }
+  } 
+}
+
 @mixin transition($value: all .3s) {
   -webkit-transition: $value;
   -o-transition: $value;
