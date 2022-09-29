@@ -15,6 +15,7 @@
     gap: 44px;
     @include responsive-max(1024) { gap: 25px; }
     @include responsive-max(995) { @include flex-wrap; }
+    @include responsive-max(767) { @include justify-content(center); }
 
     li {
       @include flex-basis(33%);
@@ -24,6 +25,8 @@
       @include flex-direction(column);
       background-color: $bg-para;
       @include responsive-max(995) { @include flex-basis(48%); }
+      @include responsive-max(767) { @include flex-basis(90%); }
+      @include responsive-max(540) { @include flex-basis(100%); }
     }
     
     p {

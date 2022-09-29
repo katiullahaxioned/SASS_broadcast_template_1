@@ -4,6 +4,7 @@
   &__wrapper {
     width: 100%;
     position: relative;
+    @include responsive-max(767) { height: 100vh; }
   }
 
   &__figure {
@@ -24,10 +25,12 @@
     text-align: center;
     @include transform(translate(-50%,-50%));
     @include responsive-max(1024) { width: 80%; }
+    @include responsive-max(767) { width: 100%; }
 
     h1 {
       font-size: 55px;
       @include responsive-max(995) { font-size: 40px; }
+      @include responsive-max(480) { font-size: 30px; }
     }
 
     p {
