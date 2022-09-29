@@ -11,6 +11,7 @@ $h: 'header';
   top: 0;
   left: 0;
   background-color: rgba(16, 29, 58, .9);
+  @include responsive-max(1024) { padding: 16px 3%; }
   
   @at-root {
     .#{$h}__hamburger {  

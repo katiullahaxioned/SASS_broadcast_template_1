@@ -32,6 +32,8 @@ p {
   font-size: 18px;
   line-height: 1.5;
   word-spacing: 1px;
+
+  @include responsive-max(1280) { font-size: 16px; }
 }
 
 .eventOne__lists,
@@ -50,10 +52,12 @@ p {
 
     & img { @include transition; }
 
-    &:hover {
-      color: $clr-pink;
-
-      & img { @include transform(scale(1.1)); } 
+    @include responsive-min(1024) {
+      &:hover {
+        color: $clr-pink;
+  
+        & img { @include transform(scale(1.1)); } 
+      }
     }
   }
 }

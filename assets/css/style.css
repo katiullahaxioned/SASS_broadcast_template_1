@@ -164,6 +164,11 @@ p {
   line-height: 1.5;
   word-spacing: 1px;
 }
+@media only screen and (max-width: 1280px) {
+  p {
+    font-size: 16px;
+  }
+}
 
 .eventOne__lists a,
 .eventTwo__gallery--lists a,
@@ -194,17 +199,19 @@ p {
   -o-transition: all 0.3s;
   transition: all 0.3s;
 }
-.eventOne__lists a:hover,
+@media only screen and (min-width: 1024px) {
+  .eventOne__lists a:hover,
 .eventTwo__gallery--lists a:hover,
 .eventThree__gallery--lists a:hover {
-  color: #aa14cc;
-}
-.eventOne__lists a:hover img,
+    color: #aa14cc;
+  }
+  .eventOne__lists a:hover img,
 .eventTwo__gallery--lists a:hover img,
 .eventThree__gallery--lists a:hover img {
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
 }
 
 /* common styling for all ends here */
@@ -226,6 +233,11 @@ p {
   top: 0;
   left: 0;
   background-color: rgba(16, 29, 58, 0.9);
+}
+@media only screen and (max-width: 1024px) {
+  .header__wrapper {
+    padding: 16px 3%;
+  }
 }
 .header__hamburger {
   display: -webkit-box;
@@ -359,6 +371,11 @@ p {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+@media only screen and (max-width: 1280px) {
+  .banner__content {
+    top: 45%;
+  }
+}
 .banner__content h1 {
   font-size: 55px;
 }
@@ -375,9 +392,11 @@ p {
   color: #fff;
   font-size: 20px;
 }
-.banner__button:hover {
-  background-color: #fff;
-  color: #101d3a;
+@media only screen and (min-width: 1024px) {
+  .banner__button:hover {
+    background-color: #fff;
+    color: #101d3a;
+  }
 }
 
 /* banner section styling ends here */
@@ -400,6 +419,11 @@ p {
   flex-direction: column;
   background-color: #0E2231;
 }
+@media only screen and (max-width: 1024px) {
+  .eventOne__wrapper {
+    padding: 70px 3%;
+  }
+}
 .eventOne__lists {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -411,6 +435,11 @@ p {
   -ms-flex-pack: center;
   justify-content: center;
   gap: 50px;
+}
+@media only screen and (max-width: 1024px) {
+  .eventOne__lists {
+    gap: 25px;
+  }
 }
 .eventOne__lists li {
   border-radius: 5px;
@@ -441,6 +470,14 @@ p {
   flex-direction: column;
   background-color: #0C1C25;
 }
+@media only screen and (max-width: 1024px) {
+  .eventTwo__wrapper {
+    padding: 70px 3%;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
 .eventTwo__gallery {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -452,6 +489,19 @@ p {
   -ms-flex-pack: center;
   justify-content: center;
   gap: 38px;
+}
+@media only screen and (max-width: 1280px) {
+  .eventTwo__gallery {
+    gap: 25px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .eventTwo__gallery {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
 }
 .eventTwo__gallery--controls {
   margin-left: 6px;
@@ -472,6 +522,26 @@ p {
   flex-basis: 39.5%;
   gap: 9px;
 }
+@media only screen and (max-width: 1280px) {
+  .eventTwo__gallery--controls {
+    margin-left: 0;
+    -ms-flex-preferred-size: 45%;
+    flex-basis: 45%;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .eventTwo__gallery--controls {
+    width: 100%;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    gap: 25px;
+  }
+}
 .eventTwo__gallery--controls li {
   width: 100%;
 }
@@ -487,9 +557,11 @@ p {
   color: #c1c7cd;
   font-size: 15px;
 }
-.eventTwo__gallery--controls a:hover {
-  background-color: #aa14cc;
-  color: #fff;
+@media only screen and (min-width: 1024px) {
+  .eventTwo__gallery--controls a:hover {
+    background-color: #aa14cc;
+    color: #fff;
+  }
 }
 .eventTwo__gallery--lists {
   display: -webkit-box;
@@ -505,6 +577,11 @@ p {
   flex-wrap: wrap;
   gap: 32px;
 }
+@media only screen and (max-width: 1280px) {
+  .eventTwo__gallery--lists {
+    gap: 25px;
+  }
+}
 .eventTwo__gallery--lists li {
   border-radius: 5px;
   display: -webkit-box;
@@ -517,6 +594,21 @@ p {
   -ms-flex-pack: center;
   justify-content: center;
   overflow: hidden;
+}
+@media only screen and (max-width: 1280px) {
+  .eventTwo__gallery--lists li {
+    -ms-flex-preferred-size: 31.3%;
+    flex-basis: 31.3%;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .eventTwo__gallery--lists li {
+    -ms-flex-preferred-size: 31.6%;
+    flex-basis: 31.6%;
+  }
+}
+.eventTwo__gallery--lists a {
+  width: 100%;
 }
 
 /* eventTwo section styling ends here */
@@ -539,6 +631,11 @@ p {
   flex-direction: column;
   background-color: #0B1417;
 }
+@media only screen and (max-width: 1024px) {
+  .eventThree__wrapper {
+    padding: 70px 3%;
+  }
+}
 .eventThree__gallery--lists {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -550,6 +647,11 @@ p {
   -ms-flex-pack: center;
   justify-content: center;
   gap: 44px;
+}
+@media only screen and (max-width: 1024px) {
+  .eventThree__gallery--lists {
+    gap: 25px;
+  }
 }
 .eventThree__gallery--lists li {
   -ms-flex-preferred-size: 33%;
@@ -583,6 +685,11 @@ p {
   flex-direction: column;
   background-color: #020b13;
 }
+@media only screen and (max-width: 1024px) {
+  .footer__wrapper {
+    padding: 70px 3%;
+  }
+}
 .footer__menu {
   width: 100%;
   display: -webkit-box;
@@ -595,6 +702,11 @@ p {
   -ms-flex-pack: center;
   justify-content: center;
   gap: 43px;
+}
+@media only screen and (max-width: 1024px) {
+  .footer__menu {
+    gap: 25px;
+  }
 }
 .footer__menu--item {
   -ms-flex-preferred-size: 33%;
@@ -618,9 +730,11 @@ p {
   color: #c1c7cd;
   font-size: 15px;
 }
-.footer__menu--item a:hover {
-  margin-left: 5px;
-  color: #aa14cc;
+@media only screen and (min-width: 1024px) {
+  .footer__menu--item a:hover {
+    margin-left: 5px;
+    color: #aa14cc;
+  }
 }
 
 .footer__social {
@@ -645,8 +759,10 @@ p {
   font-size: 27px;
   text-indent: -99999px;
 }
-.footer__social a:hover {
-  color: #aa14cc;
+@media only screen and (min-width: 1024px) {
+  .footer__social a:hover {
+    color: #aa14cc;
+  }
 }
 .footer__social li:nth-child(1) a::before {
   content: "\f099";
@@ -704,8 +820,10 @@ p {
 .footer__copy a:first-child {
   text-transform: uppercase;
 }
-.footer__copy a:hover {
-  color: #aa14cc;
+@media only screen and (min-width: 1024px) {
+  .footer__copy a:hover {
+    color: #aa14cc;
+  }
 }
 
 /* footer section styling ends here */

@@ -7,11 +7,13 @@
     @include flex-common;
     @include flex-direction(column);
     background-color: $bg-event1;
+    @include responsive-max(1024) { padding: 70px 3%; }
   }
 
   &__lists {
     @include flex-common;
     gap: 50px;
+    @include responsive-max(1024) { gap: 25px; }
 
     li {
       border-radius: 5px;

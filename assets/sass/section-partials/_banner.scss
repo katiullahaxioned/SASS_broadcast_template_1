@@ -22,6 +22,7 @@
     font-weight: 600;
     text-align: center;
     @include transform(translate(-50%,-50%));
+    @include responsive-max(1280) { top: 45%; }
 
     h1 {
       font-size: 55px;
@@ -42,9 +43,11 @@
     color: $clr-white;
     font-size: 20px;
 
-    &:hover {
-      background-color: $clr-white;
-      color: $bg-header;
+    @include responsive-min(1024) {
+      &:hover {
+        background-color: $clr-white;
+        color: $bg-header;
+      }
     }
   }
 }

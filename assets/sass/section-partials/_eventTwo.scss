@@ -7,11 +7,19 @@
     @include flex-common(flex-start, center);
     @include flex-direction(column);
     background-color: $bg-event2;
+
+    @include responsive-max(1024) {
+      padding: 70px 3%;
+      @include align-items(center);
+    }
   }
 
   &__gallery {
     @include flex-common(flex-start, center);
     gap: 38px;
+    @include responsive-max(1280) { gap: 25px; }
+    @include responsive-max(1024) { @include flex-direction(column); }
+
 
     &--controls {
       margin-left: 6px;
@@ -19,6 +27,19 @@
       @include flex-direction(column);
       @include flex-basis(39.5%);
       gap: 9px;
+
+      @include responsive-max(1280) {
+        margin-left: 0;
+        @include flex-basis(45%); 
+      }
+
+      @include responsive-max(1024) {
+        width: 100%;
+        @include align-items(center);
+        @include flex-direction(row);
+        gap: 25px;
+      }
+      
 
       li {
         width: 100%;
@@ -39,9 +60,11 @@
         color: $clr-para;
         font-size: 15px;
 
-        &:hover {
-          background-color: $clr-pink;
-          color: $clr-white;
+        @include responsive-min(1024) {
+          &:hover {
+            background-color: $clr-pink;
+            color: $clr-white;
+          }
         }
       }
     }
@@ -50,12 +73,17 @@
       @include flex-common(flex-start, center);
       @include flex-wrap;
       gap: 32px;
+      @include responsive-max(1280) { gap: 25px; }
 
       li {
         border-radius: 5px;
         @include flex-common;
         overflow: hidden;
+        @include responsive-max(1280) { @include flex-basis(31.3%); }
+        @include responsive-max(1024) { @include flex-basis(31.6%); }
       }
+
+      a { width: 100%; }
     }
   }
 }

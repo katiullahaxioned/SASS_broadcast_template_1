@@ -8,12 +8,14 @@ $f: 'footer';
   @include flex-common;
   @include flex-direction(column);
   background-color: $bg-footer;
+  @include responsive-max(1024) { padding: 70px 3%; }
 
   @at-root {
     .#{$f}__menu {
       width: 100%;
       @include flex-common;
       gap: 43px;
+      @include responsive-max(1024) { gap: 25px; }
 
       &--item {
         @include flex-basis(33%);
@@ -37,9 +39,11 @@ $f: 'footer';
           color: $clr-para;
           font-size: 15px;
 
-          &:hover {
-            margin-left: 5px;
-            color: $clr-pink;
+          @include responsive-min(1024) {
+            &:hover {
+              margin-left: 5px;
+              color: $clr-pink;
+            }
           }
         }
       }
@@ -59,7 +63,10 @@ $f: 'footer';
         font-size: 27px;
         text-indent: -99999px;
     
-        &:hover { color: $clr-pink; }
+        @include responsive-min(1024) {
+          &:hover { color: $clr-pink; }
+        }
+
       }
     
       @include socialIcon($social-icons);
@@ -73,7 +80,10 @@ $f: 'footer';
       a {
         color: $clr-para;
         &:first-child { text-transform: uppercase; }
-        &:hover { color: $clr-pink; }
+
+        @include responsive-min(1024) {
+          &:hover { color: $clr-pink; }
+        }
       }
     }
   }
