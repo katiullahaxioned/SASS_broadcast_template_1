@@ -1,0 +1,63 @@
+/* eventTwo section styling starts here */
+
+.eventTwo {
+  &__wrapper {
+    width: 100%;
+    padding: 96px 5% 91px;
+    @include flex-common(flex-start, center);
+    @include flex-direction(column);
+    background-color: $bg-event2;
+  }
+
+  &__gallery {
+    @include flex-common(flex-start, center);
+    gap: 38px;
+
+    &--controls {
+      margin-left: 6px;
+      @include flex-common(flex-start, center);
+      @include flex-direction(column);
+      @include flex-basis(39.5%);
+      gap: 9px;
+
+      li {
+        width: 100%;
+
+        &:nth-child(1) {
+          a {
+            background-color: $clr-pink;
+            color: $clr-white;
+          }
+        }
+      }
+
+      a {
+        padding: 11px 15px;
+        border-radius: 4px;
+        display: block;
+        background-color: $bg-para;
+        color: $clr-para;
+        font-size: 15px;
+
+        &:hover {
+          background-color: $clr-pink;
+          color: $clr-white;
+        }
+      }
+    }
+
+    &--lists {
+      @include flex-common(flex-start, center);
+      @include flex-wrap;
+      gap: 32px;
+
+      li {
+        border-radius: 5px;
+        @include flex-common;
+        overflow: hidden;
+      }
+    }
+  }
+}
+
+/* eventTwo section styling ends here */

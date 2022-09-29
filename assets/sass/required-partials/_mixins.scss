@@ -61,6 +61,12 @@
   align-items: $value;
 }
 
+@mixin flex-common($align: center, $justify: center) {
+  @include display-flex;
+  @include align-items($align);
+  @include justify-content($justify);
+}
+
 @mixin flex-direction($value) {
   @if($value == 'row') {
     -webkit-box-orient: horizontal;
@@ -86,7 +92,7 @@
   flex-direction: $value;
 }
 
-@mixin flex-wrap($value) {
+@mixin flex-wrap($value: wrap) {
   -ms-flex-wrap: $value;
   flex-wrap: $value;
 }
@@ -221,7 +227,7 @@
   backdrop-filter: $value;
 }
 
-@mixin object($fit, $position) {
+@mixin object($fit: cover, $position: center) {
   -o-object-fit: $fit;
   object-fit: $fit;
   -o-object-position: $position;

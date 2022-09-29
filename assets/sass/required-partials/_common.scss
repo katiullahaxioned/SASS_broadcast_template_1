@@ -33,4 +33,28 @@ p {
   word-spacing: 1px;
 }
 
+.eventOne__lists,
+.eventTwo__gallery--lists,
+.eventThree__gallery--lists {
+  a {
+    overflow: hidden;
+    position: relative;
+    color: $bg-para;
+
+    &::before {
+      @include fontAwesome(#{$play-icon});
+      z-index: 1;
+      font-size: 47px;
+    }
+
+    & img { @include transition; }
+
+    &:hover {
+      color: $clr-pink;
+
+      & img { @include transform(scale(1.1)); } 
+    }
+  }
+}
+
 /* common styling for all ends here */

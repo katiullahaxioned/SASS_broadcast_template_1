@@ -164,6 +164,48 @@ p {
   word-spacing: 1px;
 }
 
+.eventOne__lists a,
+.eventTwo__gallery--lists a,
+.eventThree__gallery--lists a {
+  overflow: hidden;
+  position: relative;
+  color: #34434f;
+}
+.eventOne__lists a::before,
+.eventTwo__gallery--lists a::before,
+.eventThree__gallery--lists a::before {
+  content: "\f04b";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-family: "fontAwesome";
+  text-indent: 0;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  font-size: 47px;
+}
+.eventOne__lists a img,
+.eventTwo__gallery--lists a img,
+.eventThree__gallery--lists a img {
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.eventOne__lists a:hover,
+.eventTwo__gallery--lists a:hover,
+.eventThree__gallery--lists a:hover {
+  color: #aa14cc;
+}
+.eventOne__lists a:hover img,
+.eventTwo__gallery--lists a:hover img,
+.eventThree__gallery--lists a:hover img {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
 /* common styling for all ends here */
 /* header section styling starts here */
 .header__wrapper {
@@ -172,27 +214,30 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   position: absolute;
   z-index: 1;
   top: 0;
   left: 0;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   background-color: rgba(16, 29, 58, 0.9);
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
 }
 .header__hamburger {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  overflow: hidden;
-  z-index: 3;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  overflow: hidden;
+  z-index: 3;
   cursor: pointer;
   gap: 8px;
 }
@@ -252,17 +297,17 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   position: fixed;
   z-index: 2;
   top: 0;
   left: -100%;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   background-color: #101d3a;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
@@ -339,20 +384,20 @@ p {
 .eventOne__wrapper {
   width: 100%;
   padding: 96px 5% 91px;
-  background-color: #122635;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  background-color: #101f28;
 }
 .eventOne__lists {
   display: -webkit-box;
@@ -371,41 +416,108 @@ p {
   overflow: hidden;
   background-color: #34434f;
 }
-.eventOne__lists a {
-  overflow: hidden;
-  position: relative;
-  color: #34434f;
-}
-.eventOne__lists a::before {
-  content: "\f04b";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  font-family: "fontAwesome";
-  text-indent: 0;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  font-size: 47px;
-}
-.eventOne__lists a img {
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
-}
-.eventOne__lists a:hover {
-  color: #aa14cc;
-}
-.eventOne__lists a:hover img {
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
-}
 .eventOne__lists p {
   padding: 26px 30px;
 }
 
 /* eventOne section styling ends here */
+/* eventTwo section styling starts here */
+.eventTwo__wrapper {
+  width: 100%;
+  padding: 96px 5% 91px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: #122635;
+}
+.eventTwo__gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 38px;
+}
+.eventTwo__gallery--controls {
+  margin-left: 6px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-preferred-size: 39.5%;
+  flex-basis: 39.5%;
+  gap: 9px;
+}
+.eventTwo__gallery--controls li {
+  width: 100%;
+}
+.eventTwo__gallery--controls li:nth-child(1) a {
+  background-color: #aa14cc;
+  color: #fff;
+}
+.eventTwo__gallery--controls a {
+  padding: 11px 15px;
+  border-radius: 4px;
+  display: block;
+  background-color: #34434f;
+  color: #c1c7cd;
+  font-size: 15px;
+}
+.eventTwo__gallery--controls a:hover {
+  background-color: #aa14cc;
+  color: #fff;
+}
+.eventTwo__gallery--lists {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+.eventTwo__gallery--lists li {
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* eventTwo section styling ends here */
 
 /*# sourceMappingURL=style.css.map */

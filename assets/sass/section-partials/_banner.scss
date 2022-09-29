@@ -10,7 +10,7 @@
 
     img {
       height: 100%;
-      @include object(cover, center);
+      @include object;
     }
   }
 
